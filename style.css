@@ -37,8 +37,25 @@ h1, h2, h3, p { margin-top: 0; }
   padding: 0 28px;
   gap: 30px;
 }
-.logo-link { flex-shrink: 0; }
-.intel-logo { width: 94px; }
+.logo-link {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.intel-logo {
+  width: 94px;
+  filter: brightness(0) saturate(100%) invert(72%) sepia(29%) saturate(713%) hue-rotate(98deg) brightness(89%) contrast(86%);
+}
+
+.logo-link::after {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 7px;
+  height: 7px;
+  background: var(--blue);
+  content: "";
+}
 .main-nav { display: flex; align-items: center; flex: 1; gap: 25px; }
 .main-nav a, .footer-links a { text-decoration: none; }
 .main-nav a { color: #163b62; font-size: 0.72rem; font-weight: 700; }
